@@ -1,0 +1,29 @@
+def main():
+    num1 = float(input("Enter number 1 ")) #input
+    num2 = float(input("Enter number 2 ")) #input
+    operation = input("Enter operation ") #input
+
+    if check(num1, num2): #call check()
+        x = math(int(num1), int(num2), operation) #if its int, answer will come out as integer
+    else:
+        x = round(math(num1, num2, operation), 3) #if its float, answer will be rounded to 3 decimals
+    print(x)
+
+def check(x, y): #checks if its float or int
+    if x%1 == 0 and y%1 == 0:
+        return True #int
+    else:
+        return False #float
+
+def math(num1, num2, operation): #doing the operation
+    if operation == "+":
+        answer = num1 + num2
+    if operation == "-":
+        answer = num1 - num2
+    if operation == "*":
+        answer = num1 * num2
+    if operation == "/":
+        answer = num1 / num2
+    return answer
+
+main()
