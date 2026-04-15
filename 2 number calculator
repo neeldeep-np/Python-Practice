@@ -16,14 +16,17 @@ def check(x, y): #checks if its float or int
         return False #float
 
 def math(num1, num2, operation): #doing the operation
-    if operation == "+":
+    if operation == "+" or operation == "add":
         answer = num1 + num2
-    if operation == "-":
+    if operation == "-" or operation == "sub":
         answer = num1 - num2
-    if operation == "*":
+    if operation == "*" or operation == "mul":
         answer = num1 * num2
-    if operation == "/":
-        answer = num1 / num2
+    if operation == "/" or operation == "div":
+        if num2 == 0:
+            return "Cannot divide by 0"
+        else:
+            answer = round(num1 / num2, 3)
     return answer
 
 main()
